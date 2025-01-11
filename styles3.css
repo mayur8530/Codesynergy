@@ -1,0 +1,161 @@
+
+.CodeMirror {
+    height: 550px; 
+    width: 100%;
+}
+
+#textareacontainer {
+    position: relative;
+    width: 100%;
+}
+
+#iframecontainer {
+    margin-top: 90px;
+    position: relative;
+    background-color: #fdfafa;
+    font-size: larger;
+    border-radius: 8px; 
+    padding: 10px; 
+    height: calc(100vh - 120px); 
+    overflow: auto;
+}
+
+#iframewrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none; 
+    border-radius: 8px; 
+}
+
+#runloadercontainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+    text-align: center; 
+    padding: 20px;
+}
+
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 3px dotted #fcf8f8;
+    border-style: solid solid dotted dotted;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 2s linear infinite;
+  }
+  .loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px dotted #FF3D00;
+    border-style: solid solid dotted;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    animation: rotationBack 1s linear infinite;
+    transform-origin: center center;
+  }
+      
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+  @keyframes rotationBack {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  } 
+#fileSection {
+    background-color: #343a40; 
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid #b5cfeb; 
+    background-color: #fcf9f9; 
+}
+
+#fileSection h2 {
+    font-size: 1.5rem; /* Adjust as needed */
+    margin-bottom: 10px;
+    color: #fff; /* Text color for contrast */
+}
+
+#fileSection .btn {
+    position: relative;
+    padding-left: 21px; /* Space for icon */
+}
+
+#fileSection .btn::before {
+    position: absolute;
+    left: 10px;
+    top: 60%;
+    width: 20px;
+    height: 16px;
+    background-size: cover;
+}
+
+/* File List Styling */
+#fileList .list-group-item {
+    background-color: #495057;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+#fileList .list-group-item:hover {
+    background-color: #adb5bd;
+    color: black;
+}
+
+/* File Name Styling */
+.file-name {
+    max-width: 80%; /* Adjust based on your layout */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Button Sizes */
+.btn-group .btn {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+/* Optional Adjustments */
+body {
+    background-color: #f4f4f4;
+}
+
+.container-fluid {
+    max-width: 1500px;
+    padding: 20px;
+}
